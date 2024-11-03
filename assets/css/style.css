@@ -1,0 +1,464 @@
+/* 
+THEME: 
+ Template VERSION: 1.0.0
+ AUTHOR: Sajedul islam. 
+ GITHUB: 
+
+
+*/
+/* Reset Css Start Here  */
+
+/* Caveat  font  */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+/* Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --yellow:#e3aa11;
+    --white:#ffff;
+    --black:#000;
+    --gray-black:#333;
+    --body-color:#212529;
+    --gray:#b9b9b9;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: .3s;
+    text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Caveat", cursive;
+}
+
+
+body {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--body-color);
+    font-family:  "Montserrat", sans-serif;
+    background: url('../img/background.jpg');
+    background-attachment: fixed;
+
+}
+
+/* Reset Css End Here  */
+
+
+/* Common Css Start Here  */
+
+/* Preloader style */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    z-index: 9999;
+    /* Make sure it's on top of everything else */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Spinner animation */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-top-color: var(--yellow);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hide preloader when the page is loaded */
+body.loaded #preloader {
+    display: none;
+}
+
+/* Scroll Bar  */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--yellow);
+    color: var(--white);
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 50%;
+    text-align: center;
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+    /* Make sure it's on top */
+}
+
+#scrollToTop:hover {
+    background-color: var(--yellow);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* section-title  */
+
+.section-title h4 {
+  font-size: 70px;
+  line-height: 84px;
+  font-weight: 500;
+  color: var(--yellow);
+}
+.section-title p {
+  color: var(--gray);
+}
+.section-title p .dashed {
+  color: var(--yellow);
+}
+
+/* Common Css End Here  */
+
+
+/* Header section start Here  */
+
+/* Header Top Content  */
+.header-top-content {
+  background-color: var(--black);
+  border-bottom: 1px dashed var(--yellow);
+}
+.header-top-content a {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--yellow);
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+}
+
+/* Header bottom Content  */
+.header-bottom-content {
+	background-color: var(--body-color);
+}
+.header-bottom-content-left ul li,
+.header-bottom-content-right ul li {
+  color: var(--white);
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.header-bottom-content-left ul  .dashed,
+.header-bottom-content-right ul .dashed,
+.changing-lang a {
+  color: var(--yellow);
+  font-size: 20px;
+  line-height: 24px;
+}
+
+
+.social-icon li a {
+  display: inline-block;
+  color: var(--white);
+  margin-left: 8px;
+}
+.header-bottom-content-right ul li:hover,
+.social-icon li a:hover {
+  color: var(--yellow);
+  transition: .3s;
+}
+
+/* Header Bottom  */
+.header-area {
+	background-position: center;
+	background-size: contain;
+	padding: 10px 0;
+}
+.header-logo a img {
+	width: 80px;
+}
+
+.menu li a {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.menu li a:hover,
+.menu li .active-list{
+    color: var(--yellow);
+}
+
+.menu li .active-btn, 
+.active-btn {
+  background-color: var(--yellow);
+  padding: 5px;
+  color: var(--gray-black);
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px dashed var(--yellow);
+  display: inline-block;
+}
+.menu li .active-btn:hover,
+.active-btn:hover {
+  background: transparent;
+  color: var(--yellow);
+  transition: .3s;
+}
+.animation{
+    animation: active-btn-animation 1.5s ease-in-out infinite;
+}
+@keyframes active-btn-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(2deg) scale(0.9);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Header section End Here  */
+
+/* Main Section Area Start Here */
+
+/* Videos Area  */
+.video-wraper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.videos {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+.video-content {
+	position: absolute;
+	top: 0;
+	background: rgba(0, 0, 0, 0.395);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.video-content h1 {
+  font-size: 80px;
+  line-height: 96px;
+  color: var(--yellow);
+}
+.video-content p {
+  font-size: 28px;
+  line-height: 33px;
+  color: var(--white);
+}
+.letter-spaicing {
+	letter-spacing: 7px;
+	color: #e3aa11 !important;
+}
+/* About Area  */
+.about-img img {
+	width: 100%;
+	box-shadow: 4px 4px 3px var(--yellow);
+}
+.about-content h2 {
+	font-size: 53px;
+	line-height: 64px;
+	font-weight: 500;
+	color: var(--yellow);
+	/* max-width: 400px; */
+}
+
+.about-content p {
+  color: var(--gray);
+}
+.about-content p span {
+  color: var(--yellow);
+}
+
+/* Food Menu Area  */
+.cover-50{
+  background-size: cover;
+  background-position: center;
+  height: 50vh !important;
+}
+.food-area {
+	padding: 90px 0 !important;
+}
+
+.food-card {
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	position: relative;
+	cursor: pointer;
+	width: 403px;
+}
+
+.food-card::after {
+	position: absolute;
+	content: '';
+	width: 100%;
+	background: var(--black);
+	height: 100%;
+	opacity: 0.7;
+}
+.food-card-content {
+	z-index: 99;
+}
+.food-card-content h4 {
+  font-size: 53px;
+  line-height: 64px;
+  font-weight: 500;
+  color: var(--yellow);
+}
+.food-card-content p {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.food-card:hover {
+	transform: rotate(-3deg) scale(.9);
+    transition: .3s ease;
+}
+
+/* Footer Area  */
+.footer-area {
+	padding: 80px 0 40px;
+}
+.footer-content h5 {
+  font-size: 53px;
+  line-height: 64px;
+  color: var(--yellow);
+}
+.footer-content ul li {
+  margin-top: 13px;
+  color: var(--white);
+}
+.footer-content ul li a {
+  display: inline-block;
+  color: var(--white);
+}
+.footer-content ul li a:hover,
+.footer-nav li a:hover {
+  color: var(--yellow);
+}
+
+.footer-content ul li a img {
+	width: 63px;
+}
+.footer-nav li a {
+	color: var(--white);
+}
+
+.footer-para{
+    color: var(--white);
+}
+.footer-para a{
+    display: inline-block;
+    color: var(--yellow);
+}
+
+/* Contact Area  */
+
+.contact-area {
+  padding: 80px 0;
+}
+.contact-content {
+  background: var(--gray-black);
+  padding: 30px;
+  color: var(--white);
+}
+.contact-content h5 {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--yellow);
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+}
+.contact-content span {
+  display: block;
+  margin: 5px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+ 
+.contact-content ul li a,
+.contact-form p {
+  color: var(--white);
+}
+.contact-content ul li,
+.contact-content ul li a:hover {
+  color: var(--yellow);
+}
+.form-label {
+    font-weight: 600;
+    color: var(--white);
+}
+
+.form-control {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: var(--yellow);
+    box-shadow: none;
+}
+
+textarea.form-control {
+    resize: none; 
+}
+
+/* Submit button styling */
+form button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+    margin-top: 4px;
+}
+
+
+
+
