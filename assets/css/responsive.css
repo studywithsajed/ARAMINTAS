@@ -21,18 +21,20 @@
    }
   
   .nav-bar {
-    display: none;
     width: 100%;
     background: #000;
     padding: 80px;
     position: absolute;
     top: 0;
-    right: 0;
+    left:0;
     display: flex;
     justify-content: center;
     align-items: center;
     transform: translateX(100%);
     transition: all 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
   .menu {
     flex-direction: column;
