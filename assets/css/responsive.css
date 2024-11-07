@@ -8,17 +8,20 @@
     
 } 
 @media only screen and (max-width: 767px) {
-    .header-bottom-content {
-      display: none;
-    }
-    .mobile-navbar-btn{
-      display: block;
-      z-index: 999;
-      
-    }
-    .header-area{
-      position: relative;
-   }
+  #scrollToTop {
+    padding: 8px 10px;
+  }
+  .header-bottom-content {
+    display: none;
+  }
+  .mobile-navbar-btn{
+    display: block;
+    z-index: 999;
+    
+  }
+  .header-area{
+    position: relative;
+  }
   
   .nav-bar {
     width: 100%;
@@ -80,6 +83,9 @@
     text-align: center !important;
     margin: 10px 0;
   }
+  .about-content {
+    text-align: center;
+  }
   .about-content h2 {
     font-size: 36px;
     line-height: 45px;
@@ -87,5 +93,18 @@
   .footer-content h5 {
     font-size: 45px;
     line-height: 56px;
+  }
+  .section-title h4 {
+    font-size: 41px;
+    line-height: 56px;
+  }
+  .about-img {
+    margin-bottom: 15px;
+  }
+  .about-area {
+    padding: 12px 0 !important;
+  }
+  .food-area {
+    padding: 0 0 20px !important;
   }
 } 

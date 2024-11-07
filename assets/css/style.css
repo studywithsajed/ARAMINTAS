@@ -143,7 +143,7 @@ body.loaded #preloader {
   cursor: pointer;
 } 
 .mobail-nav-icon {
-	font-size: 30px;
+	font-size: 27px;
 	color: #e3aa11;
 	position: relative;
 	z-index: 999;
@@ -325,7 +325,7 @@ body.loaded #preloader {
 	background-position: center;
 	position: relative;
 	cursor: pointer;
-	height: 327px;
+	height: 327px !important;
 	transition: 0.5s;
 }
 .food-card::after {
